@@ -3,6 +3,17 @@
 
     require_once('logic/dbconnection.php');
 
+    //counting total number of students
+    $queryenrolledstudents=mysqli_query($conn, "SELECT * FROM enrollment");
+    $countallstudents=mysqli_num_rows($queryenrolledstudents);
+
+    //count by gender
+    $queryenrolledfemale=mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='Female' ");
+    $countallfemale=mysqli_num_rows($queryenrolledfemale);
+
+    $enrolledmale=mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='Male'");
+    $countmale=mysqli_num_rows($enrolledmale);
+
 ?>
 
 
@@ -43,7 +54,7 @@
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-group fa-3x"></i></span>
-                    <span class="float-end">00</span>
+                    <span class="float-end badge bg-primary rounded-pill"><?php echo $countallstudents ?></span>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -53,7 +64,7 @@
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-folder-open fa-3x"></i></span>
-                    <span class="float-end">00</span>
+                    <span class="float-end"><?php echo $countallfemale ?></span>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -63,7 +74,7 @@
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-graduation-cap fa-3x"></i></span>
-                    <span class="float-end">00</span>
+                    <span class="float-end"><?php echo $countmale ?></span>
                 </div>
                 <div class="card-footer"></div>
             </div>

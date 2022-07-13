@@ -1,6 +1,14 @@
 *{
     box-sizing: border-box;
 }
+form{
+    width: 1000px;
+    padding-top: 0%;
+    padding: 20px;
+    margin: 8% auto 0;
+    border-style: groove;
+    border-radius: 20px;
+}
 body{
     margin: 0;
     padding: 0;
