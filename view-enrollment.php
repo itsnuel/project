@@ -8,7 +8,7 @@
         $phonenumber=$fetchstudent['phonenumber'];
         $gender=$fetchstudent['gender'];
         $course=$fetchstudent['course'];
-        $enrolledon=$fetchstudent['enrolledon'];
+        
 
     }
 
@@ -64,7 +64,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item">Gender <span class="float-end badge bg-primary"><?php echo $gender ?></span> </li>
                                 <li class="list-group-item">Course <span class="float-end badge bg-success"><?php echo $course ?></span> </li>
-                                <li class="list-group-item">Enrolled On <span class="float-end badge bg-danger"><?php echo $enrolledon ?></span> </li>
+                                <li class="list-group-item">Enrolled On <span class="float-end badge bg-danger"><?php ?></span> </li>
                             </ul>
                         </div>
                     </div>
