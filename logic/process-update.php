@@ -16,11 +16,11 @@
 
         if($update)
         {
-            $message="Updated successfully";
+            $messages="Editedsuccessfully";
         }
         else
         {
-            $message="Error occured while updating user";
+            $messages="Error occured while editing user";
         }
 
     }

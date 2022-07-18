@@ -38,34 +38,52 @@
                 <div class="card-footer"></div>
             </div>
         </div>
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-bordered table-stripped table-hover table-responsive" style="font-size:12px;">
+                    <thead>
+                        <tr>
+                        <th>id</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Phonenumber</th>
+                        <th>Message</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php while($fetchmessage= mysqli_fetch_array($querymessage)) {?> 
+                        <tr>
+                            <td><?php echo $fetchmessage['no'] ?></td>
+                            <td><?php echo $fetchmessage['firstname'] ?></td>
+                            <td><?php echo $fetchmessage['lastname'] ?></td>
+                            <td><?php echo $fetchmessage['email'] ?></td>
+                            <td><?php echo $fetchmessage['phonenumber'] ?></td>
+                            <td><?php echo $fetchmessage['message'] ?></td>
+                            <td>
+                                <a href="edit-contactus.php?id=<?php echo $fetchmessage['no'] ?>" class="btn btn-primary">
+                                    <i class="fa fa-edit"></i>
+                                </a>
 
-            <table class="table table-bordered table-stripped table-hover table-responsive" style="font-size:12px;">
-                <thead>
-                    <tr>
-                    <th>id</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                    <th>Phonenumber</th>
-                    <th>Message</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <?php while($fetchmessage= mysqli_fetch_array($querymessage)) {?> 
-                    <tr>
-                        <td><?php echo $fetchmessage['no'] ?></td>
-                        <td><?php echo $fetchmessage['firstname'] ?></td>
-                        <td><?php echo $fetchmessage['lastname'] ?></td>
-                        <td><?php echo $fetchmessage['email'] ?></td>
-                        <td><?php echo $fetchmessage['phonenumber'] ?></td>
-                        <td><?php echo $fetchmessage['message'] ?></td>
-                    </tr>
+                                <a href="view-contactus.php?id=<?php echo $fetchmessage['no'] ?>" class="btn btn-success">
+                                    <i class="fa fa-eye"></i>
+                                </a>
 
-                    <?php }?>
-                   
-                </tbody>
+                                <a href="delete-contactus.php?id=<?php echo $fetchmessage['no'] ?>" class="btn btn-danger">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
 
-            </table>
+                        <?php }?>
+                    
+                    </tbody>
+
+                 </table>
+                </div>
+            </div>
+
 
     </div>
     
