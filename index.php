@@ -86,6 +86,7 @@
                     <span><i class="fa fa-user fa-3x"></i></span>
                     <span class="float-end">00</span>
                 </div>
+                
                 <div class="card-footer"></div>
             </div>
         </div>

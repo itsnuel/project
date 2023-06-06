@@ -53,9 +53,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php while($fetchmessage= mysqli_fetch_array($querymessage)) {?> 
+                    <?php 
+                        $count=1;
+                    while($fetchmessage= mysqli_fetch_array($querymessage)) {?> 
                         <tr>
-                            <td><?php echo $fetchmessage['no'] ?></td>
+                            <td><?php echo $count ?></td>
                             <td><?php echo $fetchmessage['firstname'] ?></td>
                             <td><?php echo $fetchmessage['lastname'] ?></td>
                             <td><?php echo $fetchmessage['email'] ?></td>
@@ -76,7 +78,7 @@
                             </td>
                         </tr>
 
-                        <?php }?>
+                        <?php $count++; }?>
                     
                     </tbody>
 
